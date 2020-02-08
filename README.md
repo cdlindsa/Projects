@@ -9,7 +9,9 @@ Assignment 2 (C): Use LZW data compression technique to encode and decode variou
 Assignment 3 (Python): Implementation of basic OLAP (Online Analytical Processing)<br>
 Assignment 4 (Python): Convert HTML to CSV Representation<br>
 <br>
-SENG330: Java
+SENG330: Java<br>
+Course Instructor: Neil Ernst<br>
+Assignment 1 (Java): Create a simple Dungeons and Dragons battle<br>
 
 # Personal
 Nothing yet!
