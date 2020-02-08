@@ -8,6 +8,7 @@ Assignment 1 (C): Use Run-Length Encoding as a lossless data compression techniq
 Assignment 2 (C): Use LZW data compression technique to encode and decode various filetypes.<br>
 Assignment 3 (Python): Implementation of basic OLAP (Online Analytical Processing)<br>
 Assignment 4 (Python): Convert HTML to CSV Representation<br>
+<br>
 SENG330: Java
 
 # Personal
