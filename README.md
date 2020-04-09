@@ -18,14 +18,8 @@ Assignment 1 (Java): Create a simple Dungeons and Dragons battle<br>
 SENG321: Requirements Engineering<br>
 Language(s): N/A<br>
 Course Instructor: Jens Weber<br>
-Other Contributors to Projects (in Alphabetical Order; Last Name, First Name): <br>
-Abdulaziz, Omar <br> 
-Kumar, Siddhant <br> 
-Makhani, Amaan <br>
-Parkes, Jon <br>
-Vellethara, Elizabeth<br>
+Other Contributors to Projects (in Alphabetical Order; Last Name, First Name): Abdulaziz, Omar; Kumar, Siddhant; Makhani, Amaan; Parkes, Jon; Vellethara, Elizabeth<br>
 Description: As a 'Client', Big Bucks Bank, our group was tasked with constructing a Requirements Document requesting a solution for increasing the amount of client investments at our institution (RD1.0). As a 'Designer', Inventoria, our group was tasked to solve the issue of a convenience store (Kevin's Convenience Store) looking to reduce physical inventory documentation. Through RSD1.0 - RSD_Final, we developed a theoretical web-based application to solve this issue.<br>
-<br>
 <br>
 # Personal
 Nothing yet!
