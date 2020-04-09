@@ -1,5 +1,5 @@
 # Projects
-Mixture of personal projects and school projects
+Mixture of personal and school projects
 
 # Courses
 SENG265: Software Development Methods<br>
