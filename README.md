@@ -22,7 +22,7 @@ Other Contributors to Projects (in Alphabetical Order; Last Name, First Name): A
 Description: As a 'Client', Big Bucks Bank, our group was tasked with constructing a Requirements Document requesting a solution for increasing the amount of client investments at our institution (RD1.0). As a 'Designer', Inventoria, our group was tasked to solve the issue of a convenience store (Kevin's Convenience Store) looking to reduce physical inventory documentation. Through RSD1.0 - RSD_Final, we developed a theoretical web-based application to solve this issue.<br>
 <br>
 # Personal
-Websites: Otolaryngology Head and Neck Cancer Research Laboratory of Alberta (OHRLA)<br>
+Websites: <a href="https://htmlpreview.github.io/?https://github.com/cdlindsa/Projects/blob/master/Personal_Projects/Websites/OHRLA/home.htm">Otolaryngology Head and Neck Cancer Research Laboratory of Alberta (OHRLA)</a><br>
 Language(s): HTML, CSS<br>
 An initial attempt at making a website for a previous employer. Skills learned to accomplish this task are credited to <a href="https://www.w3schools.com/">w3schools.com</a>. <br>
 Please note: The information on this website is out of date and does not represent my current employment status or the current status of the OHRLA laboratory.
