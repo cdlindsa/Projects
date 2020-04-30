@@ -28,8 +28,28 @@ if __name__ == "__main__":
     h = nx.Graph()
 
     # Perform a depth first search of the network
+    # Psuedo:
+        # DFS(Graph, source_node):
+            # mark source_node as visited
+            # for all neighbours of source_node in Graph:
+                # if neighbour is not visited:
+                    # DFS(Graph, neighbour)
+    # Time-complexity = O(V+E)
     dfs = list(nx.dfs_edges(g, source="a", depth_limit=None))
+
     # Perform a breadth first search of the network
+    # Psuedo:
+        # BFS(Graph, source_node):
+            # Q -> queue.
+            # Q.enqueue(source_node)
+            # mark source_node as visited.
+            # while (Q is not empty)
+                # vertex = Q.dequeue()
+                # for all neighbours of vertex in Graph:
+                    # if neighbour is not visited
+                        # Q.enqueue(neighbour)
+                        # mark neighbour as visited.
+    # Time-complexity = O(V+E)
     bfs = list(nx.dfs_edges(g, source="a", depth_limit=None))
     print(dfs)
     print(bfs)
