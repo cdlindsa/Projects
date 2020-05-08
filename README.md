@@ -27,6 +27,12 @@ Course Instructor: Dr. Jens Weber<br>
 Other Contributors to Projects (in Alphabetical Order; Last Name, First Name): Abdulaziz, Omar; Kumar, Siddhant; Makhani, Amaan; Parkes, Jon; Vellethara, Elizabeth<br>
 Description: As a 'Client', Big Bucks Bank, our group was tasked with constructing a Requirements Document requesting a solution for increasing the amount of client investments at our institution (RD1.0). As a 'Designer', Inventoria, our group was tasked to solve the issue of a convenience store (Kevin's Convenience Store) looking to reduce physical inventory documentation. Through RSD1.0 - RSD_Final, we developed a theoretical web-based application to solve this issue.<br>
 <br>
+# Database Creator
+tkinter is a popular Python library used in the creation of GUI's.<br>
+Language(s): Python 3 using Visual Studio IDE<br>
+Primarily for the purpose of practising GUI creation using tkinter libraries, this simple program aims to create a CSV 'database' containing patient identification information.
+TODO's: Create patient objects for simple output into CSV, database preview using tkinter Listbox function on main window.<br>
+<br>
 # NetworkX Practice
 <a href="https://networkx.github.io/">NetworkX</a> is a popular python-based library used in the analysis of networks and graphs. Frequently utilized alongside matplotlib libraries.<br>
 Language(s): Python 3<br>
