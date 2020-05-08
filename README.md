@@ -9,7 +9,7 @@ Assignment 3: Calculates the difference of 3 constant values and stores the resu
 Assignment 5: Simulates a scrolling message with an approximate 1 second delay that is displayed on an LCD screen. Due to COVID-19 closures, instead writes to locations in data segment memory rather than displays to an LCD.<br>
 <br>
 SENG265: Software Development Methods<br>
-Language(s): C, Python<br>
+Language(s): C, Python 2.7<br>
 Course Instructor: Adam Murray<br>
 Assignment 1 (C): Use Run-Length Encoding as a lossless data compression technique to condense the repetitive parts of DNA sequences.<br>
 Assignment 2 (C): Use LZW data compression technique to encode and decode various filetypes.<br>
@@ -29,13 +29,13 @@ Description: As a 'Client', Big Bucks Bank, our group was tasked with constructi
 <br>
 # Database Creator
 tkinter is a popular Python library used in the creation of GUI's.<br>
-Language(s): Python 3 using Visual Studio IDE<br>
+Language(s): Python 3.8 using Visual Studio IDE<br>
 Primarily for the purpose of practising GUI creation using tkinter libraries, this simple program aims to create a CSV 'database' containing patient identification information.
 TODO's: Create patient objects for simple output into CSV, database preview using tkinter Listbox function on main window.<br>
 <br>
 # NetworkX Practice
 <a href="https://networkx.github.io/">NetworkX</a> is a popular python-based library used in the analysis of networks and graphs. Frequently utilized alongside matplotlib libraries.<br>
-Language(s): Python 3<br>
+Language(s): Python 3.8<br>
 Practice creating a network and printing a figure of said network, performing a depth-first search and breadth-first search from a specific node. 
 TODO's: Shortest path algorithm\s and an all-pairs shortest path algorithm.<br>
 <br>
