@@ -36,30 +36,51 @@ class Patient:
         return self.sex
 
 def create_patient(new_w, first_name = '', last_name = '', id = '', sex = ''):
+    print(first_name, last_name, id, sex)
+    w = Patient(first_name, last_name, id, sex)
+    print(w.get_firstname(), w.get_lastname(), w.get_sex(), w.get_id())
     new_w.destroy()
+
+def checkbuttons(male, female):
+    if male.get():
+        female.set(0)
+    elif female.get():
+        male.set(0)
 
 def new_window():
     new_w = tk.Tk(screenName=None,  baseName=None,  className='TK', useTk=1) 
     new_w.title('New Patient') 
     
     # First and Last name entries
-    Label(new_w, text='First Name: ').grid(row=0)
-    entry_FN = Entry(new_w).grid(row=0, column=1)
-    Label(new_w, text='Last Name: ').grid(row=1)
-    entry_LN = Entry(new_w).grid(row=1, column=1)
-    Label(new_w, text='Patient ID: ').grid(row=2)
-    entry_LN = Entry(new_w).grid(row=2, column=1)
+    tk.Label(new_w, text='First Name: ').grid(row=0)
+    entry_FN = tk.Entry(new_w)
+    entry_FN.grid(row=0, column=1)
+
+    tk.Label(new_w, text='Last Name: ').grid(row=1)
+    entry_LN = tk.Entry(new_w)
+    entry_LN.grid(row=1, column=1)
+
+    # Patient ID entry
+    tk.Label(new_w, text='Patient ID: ').grid(row=2)
+    entry_ID = tk.Entry(new_w)
+    entry_ID.grid(row=2, column=1)
 
     # Checkboxes
     Label(new_w, text='Sex:').grid(row=3)
     male = IntVar()
     female = IntVar()
-    Checkbutton(new_w, text='Male', variable=male).grid(row=4, column=0, sticky=W)
-    Checkbutton(new_w, text='Female', variable=female).grid(row=4, column=1, sticky=W)
+    sex = "Unknown"
+    checkbutton_male = tk.Checkbutton(new_w, text='Male', variable=male, command = checkbuttons(male, female))
+    checkbutton_male.grid(row=4, column=0, sticky=W)
+    checkbutton_female = tk.Checkbutton(new_w, text='Female', variable=female, command = checkbuttons(male, female))
+    checkbutton_female.grid(row=4, column=1, sticky=W)
+
     
     # Closing buttons
-    accept_button = tk.Button(new_w, text='Accept', width=20, command=lambda : create_patient(new_w)).grid(row=5, column=0) 
-    cancel_button = tk.Button(new_w, text='Cancel', width=20, command=new_w.destroy).grid(row=5, column=1) 
+    accept_button = tk.Button(new_w, text='Accept', width=20, command=lambda : create_patient(new_w, entry_FN.get(), entry_LN.get(), sex, entry_ID.get()))
+    accept_button.grid(row=5, column=0)
+    cancel_button = tk.Button(new_w, text='Cancel', width=20, command=new_w.destroy)
+    cancel_button.grid(row=5, column=1) 
 
 
 if __name__ == "__main__":
@@ -67,8 +88,10 @@ if __name__ == "__main__":
     main_window.title('Patient Database Creator') 
 
     # Closing buttons
-    new_patient_button = tk.Button(main_window, text='New Patient', height=5, width=15, command= lambda : new_window()).grid(row=5, column=0) 
-    exit_button = tk.Button(main_window, text='Exit', height=5, width=15, command=main_window.destroy).grid(row=5, column=1) 
+    new_patient_button = tk.Button(main_window, text='New Patient', height=5, width=15, command=lambda : new_window())
+    new_patient_button.grid(row=5, column=0) 
+    exit_button = tk.Button(main_window, text='Exit', height=5, width=15, command=main_window.destroy)
+    exit_button.grid(row=5, column=1) 
 
 
     main_window.mainloop() 
