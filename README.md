@@ -4,7 +4,7 @@ Personal projects and practice using various libraries.<br>
 # Database Creator
 tkinter is a popular Python library used in the creation of GUI's.<br>
 Language(s): Python 3.8 using Visual Studio IDE<br>
-Primarily for the purpose of practising GUI creation using tkinter libraries, this simple program aims to create a CSV 'database' containing patient identification information.
+Primarily for the purpose of practicing GUI creation using tkinter libraries, this simple program aims to create a CSV 'database' containing patient identification information.
 TODO's: Create patient objects for simple output into CSV, database preview using tkinter Listbox function on main window.<br>
 <br>
 # NetworkX Practice
