@@ -1,6 +1,6 @@
 # Projects
-Mixture of personal and school projects
-
+Personal projects and practice using various libraries.<br>
+<br>
 # Database Creator
 tkinter is a popular Python library used in the creation of GUI's.<br>
 Language(s): Python 3.8 using Visual Studio IDE<br>
