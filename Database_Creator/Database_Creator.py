@@ -1,10 +1,9 @@
-
 import tkinter as tk 
 
 #Skills Used to complete program: https://www.geeksforgeeks.org/python-gui-tkinter/
 
 class Patient:
-    def __init__(self, first_name = '', last_name = '', id = '', sex = ''):
+    def __init__(self, first_name, last_name, id, sex):
         self.first_name = first_name
         self.last_name = last_name
         self.sex = sex
@@ -33,16 +32,20 @@ class Patient:
     
     def get_sex(self):
         return self.sex
+    
 
 def create_patient(new_w, first_name = '', last_name = '', id = '', sex = ''):
-    w = Patient(first_name, last_name, id, sex)
-    temp = 'Unknown'
-    if w.get_sex() == 0:
-        temp = 'Male'
-    elif w.get_sex() == 1:
-        temp = 'Female'
-    print("FN: "+ w.get_firstname() +", LN: "+ w.get_lastname()+ ", sex: "+ temp + ", ID: " + str(w.get_id()))
+    sex_final = 'Unknown'
+    if sex == 0:
+        sex_final = 'Male'
+    elif sex == 1:
+        sex_final = 'Female'
+    w = Patient(first_name, last_name, id, sex_final)
+    into_the_db(w)
     new_w.destroy()
+
+def into_the_db(w):
+        print("FN: "+ w.get_firstname() +", LN: "+ w.get_lastname() + ", sex: "+ w.get_sex() + ", ID: " + w.get_id())
 
 def new_window():
     new_w = tk.Tk(screenName=None,  baseName=None,  className='TK', useTk=1) 
@@ -61,11 +64,9 @@ def new_window():
     tk.Label(new_w, text='Patient ID: ').pack()
     entry_ID = tk.Entry(new_w)
     entry_ID.pack()
-    SEXES = {
-        "Male": 0, 
-        "Female": 1
-    }
+
     # Radiobuttons for sex
+    SEXES = {"Male": 0, "Female": 1}
     tk.Label(new_w, text='Sex:').pack()
     sex = tk.IntVar(new_w, 5)
     for (sexes, value) in SEXES.items():
@@ -78,15 +79,24 @@ def new_window():
     cancel_button = tk.Button(new_w, text='Cancel', width=20, command=new_w.destroy)
     cancel_button.pack() 
 
+class MainWindow(tk.Frame):
+    def __init__(self, root, *args, **kwargs):
+        tk.Frame.__init__(self, root, *args, **kwargs)
+        self.root = root
+        self.root.title('Patient Database Creator') 
+        
+    def setup(self): 
+        # Closing buttons
+        self.new_patient_button = tk.Button(self.root, text='New Patient', height=5, width=15, command=lambda : new_window())
+        self.new_patient_button.grid(row = 0, column = 0, padx=5, pady=5) 
+        self.export_button = tk.Button(self.root, text='Export CSV', height=5, width=15, command=self.root.destroy)
+        self.export_button.grid(row = 0, column = 1, padx=5, pady=5)  
+        self.exit_button = tk.Button(self.root, text='Exit', height=5, width=32, command=self.root.destroy)
+        self.exit_button.grid(row = 1, columnspan=2, padx=5, pady=5) 
+
 
 if __name__ == "__main__":
-    main_window = tk.Tk(screenName=None,  baseName=None,  className='TK', useTk=1) 
-    main_window.title('Patient Database Creator') 
-
-    # Closing buttons
-    new_patient_button = tk.Button(main_window, text='New Patient', height=5, width=15, command=lambda : new_window())
-    new_patient_button.pack() 
-    exit_button = tk.Button(main_window, text='Exit', height=5, width=15, command=main_window.destroy)
-    exit_button.pack()  
-
-    main_window.mainloop() 
+    root = tk.Tk() 
+    main_window = MainWindow(root)
+    main_window.setup() 
+    root.mainloop() 
