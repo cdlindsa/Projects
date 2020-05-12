@@ -6,6 +6,7 @@ tkinter is a popular Python library used in the creation of GUI's.<br>
 Language(s): Python 3.8 using Visual Studio IDE<br>
 Primarily for the purpose of practicing GUI creation using tkinter libraries, this simple program aims to create a CSV 'database' containing patient identification information.
 TODO's: Create patient objects for simple output into CSV, database preview using tkinter Listbox function on main window.<br>
+![Database Creator Preview](https://github.com/cdlindsa/Projects/blob/master/Database_Creator/image_preview/DBcreate11May2020.png)<br>
 <br>
 # NetworkX Practice
 <a href="https://networkx.github.io/">NetworkX</a> is a popular python-based library used in the analysis of networks and graphs. Frequently utilized alongside matplotlib libraries.<br>
