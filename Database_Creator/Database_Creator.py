@@ -1,8 +1,7 @@
 
 import tkinter as tk 
-from tkinter import *
 
-#https://www.geeksforgeeks.org/python-gui-tkinter/
+#Skills Used to complete program: https://www.geeksforgeeks.org/python-gui-tkinter/
 
 class Patient:
     def __init__(self, first_name = '', last_name = '', id = '', sex = ''):
@@ -36,51 +35,48 @@ class Patient:
         return self.sex
 
 def create_patient(new_w, first_name = '', last_name = '', id = '', sex = ''):
-    print(first_name, last_name, id, sex)
     w = Patient(first_name, last_name, id, sex)
-    print(w.get_firstname(), w.get_lastname(), w.get_sex(), w.get_id())
+    temp = 'Unknown'
+    if w.get_sex() == 0:
+        temp = 'Male'
+    elif w.get_sex() == 1:
+        temp = 'Female'
+    print("FN: "+ w.get_firstname() +", LN: "+ w.get_lastname()+ ", sex: "+ temp + ", ID: " + str(w.get_id()))
     new_w.destroy()
-
-def checkbuttons(male, female):
-    if male.get():
-        female.set(0)
-    elif female.get():
-        male.set(0)
 
 def new_window():
     new_w = tk.Tk(screenName=None,  baseName=None,  className='TK', useTk=1) 
     new_w.title('New Patient') 
     
     # First and Last name entries
-    tk.Label(new_w, text='First Name: ').grid(row=0)
+    tk.Label(new_w, text='First Name: ').pack()
     entry_FN = tk.Entry(new_w)
-    entry_FN.grid(row=0, column=1)
+    entry_FN.pack()
 
-    tk.Label(new_w, text='Last Name: ').grid(row=1)
+    tk.Label(new_w, text='Last Name: ').pack()
     entry_LN = tk.Entry(new_w)
-    entry_LN.grid(row=1, column=1)
+    entry_LN.pack()
 
     # Patient ID entry
-    tk.Label(new_w, text='Patient ID: ').grid(row=2)
+    tk.Label(new_w, text='Patient ID: ').pack()
     entry_ID = tk.Entry(new_w)
-    entry_ID.grid(row=2, column=1)
+    entry_ID.pack()
+    SEXES = {
+        "Male": 0, 
+        "Female": 1
+    }
+    # Radiobuttons for sex
+    tk.Label(new_w, text='Sex:').pack()
+    sex = tk.IntVar(new_w, 5)
+    for (sexes, value) in SEXES.items():
+        checkbuttons = tk.Radiobutton(new_w, text=sexes, variable=sex, value=value)
+        checkbuttons.pack()
 
-    # Checkboxes
-    Label(new_w, text='Sex:').grid(row=3)
-    male = IntVar()
-    female = IntVar()
-    sex = "Unknown"
-    checkbutton_male = tk.Checkbutton(new_w, text='Male', variable=male, command = checkbuttons(male, female))
-    checkbutton_male.grid(row=4, column=0, sticky=W)
-    checkbutton_female = tk.Checkbutton(new_w, text='Female', variable=female, command = checkbuttons(male, female))
-    checkbutton_female.grid(row=4, column=1, sticky=W)
-
-    
     # Closing buttons
-    accept_button = tk.Button(new_w, text='Accept', width=20, command=lambda : create_patient(new_w, entry_FN.get(), entry_LN.get(), sex, entry_ID.get()))
-    accept_button.grid(row=5, column=0)
+    accept_button = tk.Button(new_w, text='Accept', width=20, command=lambda : create_patient(new_w, entry_FN.get(), entry_LN.get(), entry_ID.get(), sex.get()))
+    accept_button.pack()
     cancel_button = tk.Button(new_w, text='Cancel', width=20, command=new_w.destroy)
-    cancel_button.grid(row=5, column=1) 
+    cancel_button.pack() 
 
 
 if __name__ == "__main__":
@@ -89,9 +85,8 @@ if __name__ == "__main__":
 
     # Closing buttons
     new_patient_button = tk.Button(main_window, text='New Patient', height=5, width=15, command=lambda : new_window())
-    new_patient_button.grid(row=5, column=0) 
+    new_patient_button.pack() 
     exit_button = tk.Button(main_window, text='Exit', height=5, width=15, command=main_window.destroy)
-    exit_button.grid(row=5, column=1) 
-
+    exit_button.pack()  
 
     main_window.mainloop() 
