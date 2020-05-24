@@ -15,7 +15,7 @@ Practice creating a network and printing a figure of said network, performing a 
 TODO's: Shortest path algorithm\s and an all-pairs shortest path algorithm.<br>
 <br>
 # Personal
-Websites: <a href="https://htmlpreview.github.io/?https://github.com/cdlindsa/Projects/blob/master/Personal_Projects/Websites/OHRLA/home.htm">Otolaryngology Head and Neck Cancer Research Laboratory of Alberta (OHRLA)</a><br>
+Websites: <a href="https://htmlpreview.github.io/?https://github.com/cdlindsa/Projects/blob/master/Websites/OHRLA/home.htm">Otolaryngology Head and Neck Cancer Research Laboratory of Alberta (OHRLA)</a><br>
 Language(s): HTML, CSS<br>
 An initial attempt at making a website for a previous employer. Skills learned to accomplish this task are credited to <a href="https://www.w3schools.com/">w3schools.com</a>. <br>
 Please note: The information on this website is out of date and does not represent my current employment status or the current status of the OHRLA laboratory.<br>
